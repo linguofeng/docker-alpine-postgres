@@ -1,6 +1,7 @@
 FROM hypriot/rpi-alpine-scratch
 
-COPY gosu /usr/local/bin/gosu # GFW
+# GFW, first `make gosu`
+COPY gosu /usr/local/bin/gosu
 
 RUN apk update && apk add postgresql && \
     mkdir /docker-entrypoint-initdb.d && \
